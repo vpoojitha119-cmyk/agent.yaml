@@ -1,0 +1,20 @@
+spec_version: "0.1.0"
+name: triage-bot
+version: 1.0.0
+description: >-
+  Portable GitHub issue triage agent. Classifies issue type, assigns priority,
+  flags duplicates and suggests labels. Framework-free core with adapters for
+  plain Python, LangGraph and the LLM tool-calling protocol.
+author: your-github-username
+license: MIT
+tags: [developer-tools, issue-triage, portable-agent, github]
+model:
+  preferred: "anthropic:claude-sonnet-4-5"
+  fallback: []
+tools: [classify_issue, estimate_priority, find_duplicates]
+runtime:
+  max_turns: 10
+metadata:
+  category: developer-tools
+  runtimes_verified: [native, langgraph, tool-calling]
+  verification: VERIFICATION.md

@@ -1,0 +1,14 @@
+name: classify_issue
+description: Classify a GitHub issue as bug, feature, question or docs, with a confidence score.
+input_schema:
+  properties:
+    title:
+      type: string
+      description: Issue title
+    body:
+      type: string
+      description: Issue body
+  required: [title]
+implementation:
+  script: classify_issue.py
+  runtime: python3

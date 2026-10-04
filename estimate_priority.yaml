@@ -1,0 +1,17 @@
+name: estimate_priority
+description: Estimate priority P0-P3 from issue type and text.
+input_schema:
+  properties:
+    issue_type:
+      type: string
+      description: One of bug, feature, question, docs
+    title:
+      type: string
+      description: Issue title
+    body:
+      type: string
+      description: Issue body
+  required: [issue_type, title]
+implementation:
+  script: estimate_priority.py
+  runtime: python3

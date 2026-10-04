@@ -1,0 +1,14 @@
+name: find_duplicates
+description: Check whether an issue title closely matches an existing issue title.
+input_schema:
+  properties:
+    title:
+      type: string
+      description: Issue title
+    existing_titles:
+      type: array
+      description: Titles of existing issues
+  required: [title]
+implementation:
+  script: find_duplicates.py
+  runtime: python3
